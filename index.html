@@ -14,6 +14,10 @@
         .name {
             color: green;
         }
+
+        table {
+            border: 1px solid;
+        }
     </style>
 </head>
 
@@ -75,8 +79,8 @@
             <br>
 
             <div class="skills">
-                <caption>Computer Skills</caption>
-                <table border="1">
+                <table>
+                    <caption>Computer Skills</caption>
                     <colgroup>
                         <col>
                         <col>
@@ -205,9 +209,10 @@
         <hr>
 
         <section class="contact-me" id="contact">
+            <h2>Contact Me!</h2>
             <form action="submissions.php" method="post">
                 <fieldset>
-                    <legend id="contact">Contact Me</legend>
+                    <legend id="contact-me">Input below:</legend>
                     <label for="name">Name: </label>
                     <input type="text" id="name" name="name" required>
                     
@@ -225,7 +230,7 @@
                 <br>
                 </fieldset>
                 
-                <button type="send">Send</button>
+                <button type="submit">Send</button>
             </form>
         </section>
     </main>
