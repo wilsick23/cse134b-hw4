@@ -3,23 +3,159 @@
 
 <head>
 	<meta charset="utf-8" />
-	<meta name="description" content="Simple demo Web page for CSE 134B" />
-	<meta name="keywords" content="HTML, CSS, JavaScript" />
-	<meta name="author" content="" />
+	<meta name="description" content="Non-styled Portfolio Page" />
+	<meta name="keywords" content="HTML" />
+	<meta name="author" content="Wilson Nguyen" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>CSE 134B Homework 1 Website</title>
-	<link href="images/favicon.ico" rel="icon" />
-	<link href="styles/main.css" rel="stylesheet" />
-	<script>
-		window.addEventListener('load', function () {
-			let time = window.performance.timing,
-				complete = time.domComplete - time.domLoading;
-			document.getElementById('page-load-info').innerHTML = `<strong>Page Loaded in ${parseInt(complete)}ms
-			 on ${new Date().toLocaleString("en-US")}</strong>`;
-		});
-	</script>
+    <link href="styles/main.css" rel="stylesheet" />
 </head>
 
 <body>
-	<header>
-		<h1>CSE 134B Wilson Nguyen Website</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#lab">lab</a></li>
+                <li><a href="images/resume.pdf" target="_blank">resume</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+        <section class="hero" id="home">
+            <h1>Hi There!</h1>
+            <p>My name is <span class="name">Wilson Nguyen</span> 
+                and I am an <em>aspiring</em> <br>UI/UX Designer 
+                based in San Diego, California.</p>
+        </section>
+    </header>
+    <hr>
+
+    <main>
+        <section class="about-me" id="about">
+            <h2>About Me</h2>
+            <div class="profile-container">
+                <img src="images/profile.png" alt="profilepic">
+                <p id="abouttext">I am currently a fourth year college student attending <b>UCSD</b>, <br> majoring in 
+                    <i>Cognitive Science: Design & Interaction</i>, with a <br> minor in <i>Computer Science</i>. I am hoping
+                    to break into tech as <br> a <strong>UI/UX Designer</strong>.
+                </p>
+
+                <aside id="free-time">
+                    <details>
+                        <summary>When I have free time, I like to:</summary>
+                        <ul>
+                            <li>watch movies</li>
+                            <li>find new recipes</li>
+                            <li>play computer games</li>
+                            <li>discover new music</li>
+                            <li>go to the gym</li>
+                        </ul>
+                    </details>
+                </aside>
+            </div>
+            <br>
+
+            <div class="skills">
+                <caption>Computer Skills</caption>
+                <table border="1">
+                    <colgroup>
+                        <col>
+                        <col>
+                    </colgroup>
+
+                    <tr>
+                        <th>Skills</th>
+                        <th>Proficiency</th>
+                    </tr>
+                    <tr>
+                        <td>C and C++</td>
+                        <td>Novice</td>
+                    </tr>
+                    <tr>
+                        <td>Figma</td>
+                        <td>Proficient</td>
+                    </tr>
+                    <tr>
+                        <td>HTML/CSS</td>
+                        <td>Proficient</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Proficient</td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+        <hr>
+
+        <section class="my-projects" id="projects">
+            <h2>Projects</h2>
+            <div class="first-project">
+                <iframe src="https://cse110-sp23-group6.github.io/SixthSense/" title="Sixth Sense"></iframe>
+                <p id="6thdescription">This is a fortune telling website that I worked with 8 other people on. <br>
+                    It was my first Software Engineering project. 
+                </p>
+            </div>
+            
+            <div class="second-project">
+                <p id="memdescription">This is a memento that I built in my Prototyping class. It took a lot of <br>
+                    iterations to get it to this stage and I am very proud of it. 
+                </p>
+                <picture>
+                    <source srcset="images/dsgn.jpg" type="image/jpg">
+                    <img src="images/dsgn1.jpg" alt="memento">
+                </picture>
+            </div>
+        </section>
+        <hr>
+
+        <section class="experiment" id="lab">
+            <h2>Lab</h2>
+            <figure>
+                <pre>
+                    <code>
+                        function greet() {
+                            console.log("Hello, world!");
+                        }
+                    </code>
+                </pre>
+                <figcaption>Prints out Hello, world!</figcaption>
+            </figure>
+        </section>
+        <hr>
+
+        <section class="contact-me" id="contact">
+            <form action="submissions.php" method="post">
+                <fieldset>
+                    <legend id="contact">Contact Me</legend>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email: </label>
+                    <input type="text" id="email" name="email" required>
+                    <br>
+
+                    <label for="phone">Phone: </label>
+                    <input type="text" id="phone" name="phone">
+                    <br>
+                
+
+                <label for="message">Message: </label>
+                <textarea id="message" name="message">Type your message here...</textarea>
+                <br>
+                </fieldset>
+                
+                <button type="send">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <a href="mailto:whnguyen23@gmail.com">whnguyen23@gmail.com</a>
+    </footer>
+</body>
+</html>
+
+
