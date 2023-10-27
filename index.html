@@ -9,6 +9,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>CSE 134B Homework 1 Website</title>
     <link href="styles/main.css" rel="stylesheet" />
+
+    <style>
+        .name {
+            color: green;
+        }
+    </style>
 </head>
 
 <body>
@@ -39,8 +45,14 @@
                 <img src="images/profile.png" alt="profilepic">
                 <p id="abouttext">I am currently a fourth year college student attending <b>UCSD</b>, <br> majoring in 
                     <i>Cognitive Science: Design & Interaction</i>, with a <br> minor in <i>Computer Science</i>. I am hoping
-                    to break into tech as <br> a <strong>UI/UX Designer</strong>.
+                    to break into tech as <br> a <strong>UI/UX Designer</strong>. Right now, I am currently enrolled
+                    in:
                 </p>
+                <ol>
+                    <li>COGS 3, Intro to Computing</li>
+                    <li>COGS 120, Interaction Design</li>
+                    <li>CSE 134B, Web-client languages</li>
+                </ol>
 
                 <aside id="free-time">
                     <details>
@@ -54,6 +66,11 @@
                         </ul>
                     </details>
                 </aside>
+
+                <p>Below is one of my favorite songs!</p>
+                <audio controls>
+                    <source src="audio/audio.mp3" type="audio/mpeg">
+                </audio>
             </div>
             <br>
 
@@ -98,6 +115,11 @@
                 <p id="6thdescription">This is a fortune telling website that I worked with 8 other people on. <br>
                     It was my first Software Engineering project. 
                 </p>
+
+                <p>Below is a status video I did for this project.</p>
+                <video controls>
+                    <source src="video/statusvideo1.mp4" type="video/mp4">
+                </video>
             </div>
             
             <div class="second-project">
@@ -117,13 +139,68 @@
             <figure>
                 <pre>
                     <code>
-                        function greet() {
+                        function helloWorld() {
                             console.log("Hello, world!");
                         }
                     </code>
                 </pre>
                 <figcaption>Prints out Hello, world!</figcaption>
             </figure>
+
+            <template>
+                <div class="choose-year">
+                    <label for="years">Select what year in college you are</label>
+                    
+                    <input list="years" name="year" id="year">
+                    
+                    <datalist id="years">
+                        <option value="First">
+                        <option value="Second">
+                        <option value="Third">
+                        <option value="Fourth">
+                        <option value="Not Applicable">
+                    </datalist>
+                </div>
+
+                <div class="pizza-toppings">
+                    <label for="pizzas">Choose a pizza topping:</label>
+                    <select  name="pizzas" id="pizza">
+                    <optgroup label="Meats">
+                        <option value="pepperoni">Pepperoni</option>
+                        <option value="sausage">Sausage</option>
+                        <option value="chicken">Chicken</option>
+                        <option value="meatball">Meatball</option>
+                    </optgroup>
+                    <optgroup label="Veggies">
+                        <option value="onions">Onions</option>
+                        <option value="bell peppers">Bell Peppers</option>
+                        <option value="olives">Olives</option>
+                        <option value="tomatoes">Tomatoes</option>
+                    </optgroup>
+                    </select>
+                </div>
+            </template>
+
+            <button onclick="display()">Display hidden content</button>
+
+            <script>
+                function display() {
+                  let temp = document.getElementsByTagName("template")[0];
+                  let cloned = temp.content.cloneNode(true);
+                  document.body.appendChild(cloned);
+                }
+            </script>
+            <br>
+            <br>
+
+            <canvas id="canv"></canvas>
+
+            <script>
+                var canvas = document.getElementById("canv");
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = "red";
+                ctx.fillRect(10, 10, 180, 180);
+            </script>
         </section>
         <hr>
 
