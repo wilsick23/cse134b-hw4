@@ -7,236 +7,76 @@
 	<meta name="keywords" content="HTML" />
 	<meta name="author" content="Wilson Nguyen" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>CSE 134B Homework 1 Website</title>
+	<title>CSE 134B Homework 3 Website</title>
     <link href="styles/main.css" rel="stylesheet" />
 
-    <style>
-        .name {
-            color: green;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
-        table {
-            border: 1px solid;
-        }
-    </style>
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">home</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#lab">lab</a></li>
-                <li><a href="images/resume.pdf" target="_blank">resume</a></li>
-                <li><a href="#contact">contact</a></li>
-            </ul>
+        <nav> 
+        <!--
+            <a href="#" class="toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+        -->
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="images/resume.pdf" target="_blank">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
-        <section class="hero" id="home">
-            <h1>Hi There!</h1>
-            <p>My name is <span class="name">Wilson Nguyen</span> 
-                and I am an <em>aspiring</em> <br>UI/UX Designer 
-                based in San Diego, California.</p>
-        </section>
     </header>
-    <hr>
 
     <main>
+        <section class="hero" id="home">
+        <h1>Hi There!</h1>
+        <p>My name is <span class="name">Wilson Nguyen</span> 
+            and I am an <em>aspiring</em> <br>UI/UX Designer 
+            based in San Diego, California.</p>
+        </section> 
+
         <section class="about-me" id="about">
             <h2>About Me</h2>
             <div class="profile-container">
                 <img src="images/profile.png" alt="profilepic">
-                <p id="abouttext">I am currently a fourth year college student attending <b>UCSD</b>, <br> majoring in 
-                    <i>Cognitive Science: Design & Interaction</i>, with a <br> minor in <i>Computer Science</i>. I am hoping
-                    to break into tech as <br> a <strong>UI/UX Designer</strong>. Right now, I am currently enrolled
-                    in:
+                <p id="abouttext">I am currently a fourth year college student attending <b>UCSD</b>, majoring in 
+                    <i>Cognitive Science: Design & Interaction</i>, with a minor in <i>Computer Science</i>. I am hoping
+                    to break into tech as a <strong>UI/UX Designer</strong>. 
                 </p>
-                <ol>
-                    <li>COGS 3, Intro to Computing</li>
-                    <li>COGS 120, Interaction Design</li>
-                    <li>CSE 134B, Web-client languages</li>
-                </ol>
-
-                <aside id="free-time">
-                    <details>
-                        <summary>When I have free time, I like to:</summary>
-                        <ul>
-                            <li>watch movies</li>
-                            <li>find new recipes</li>
-                            <li>play computer games</li>
-                            <li>discover new music</li>
-                            <li>go to the gym</li>
-                        </ul>
-                    </details>
-                </aside>
-
-                <p>Below is one of my favorite songs!</p>
-                <audio controls>
-                    <source src="audio/audio.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-            <br>
-
-            <div class="skills">
-                <table>
-                    <caption>Computer Skills</caption>
-                    <colgroup>
-                        <col>
-                        <col>
-                    </colgroup>
-
-                    <tr>
-                        <th>Skills</th>
-                        <th>Proficiency</th>
-                    </tr>
-                    <tr>
-                        <td>C and C++</td>
-                        <td>Novice</td>
-                    </tr>
-                    <tr>
-                        <td>Figma</td>
-                        <td>Proficient</td>
-                    </tr>
-                    <tr>
-                        <td>HTML/CSS</td>
-                        <td>Proficient</td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>Proficient</td>
-                    </tr>
-                    
-                </table>
-            </div>
-        </section>
-        <hr>
+        </section> 
 
         <section class="my-projects" id="projects">
             <h2>Projects</h2>
             <div class="first-project">
                 <iframe src="https://cse110-sp23-group6.github.io/SixthSense/" title="Sixth Sense"></iframe>
-                <p id="6thdescription">This is a fortune telling website that I worked with 8 other people on. <br>
+                <p id="6thdescription">This is a fortune telling website that I worked with 8 other people on.
                     It was my first Software Engineering project. 
                 </p>
-
-                <p>Below is a status video I did for this project.</p>
-                <video controls>
-                    <source src="video/statusvideo1.mp4" type="video/mp4">
-                </video>
-            </div>
-            
-            <div class="second-project">
-                <p id="memdescription">This is a memento that I built in my Prototyping class. It took a lot of <br>
-                    iterations to get it to this stage and I am very proud of it. 
-                </p>
-                <picture>
-                    <source srcset="images/dsgn.jpg" type="image/jpg">
-                    <img src="images/dsgn1.jpg" alt="memento">
-                </picture>
             </div>
         </section>
-        <hr>
-
-        <section class="experiment" id="lab">
-            <h2>Lab</h2>
-            <figure>
-                <pre>
-                    <code>
-                        function helloWorld() {
-                            console.log("Hello, world!");
-                        }
-                    </code>
-                </pre>
-                <figcaption>Prints out Hello, world!</figcaption>
-            </figure>
-
-            <template>
-                <div class="choose-year">
-                    <label for="years">Select what year in college you are</label>
-                    
-                    <input list="years" name="year" id="year">
-                    
-                    <datalist id="years">
-                        <option value="First">
-                        <option value="Second">
-                        <option value="Third">
-                        <option value="Fourth">
-                        <option value="Not Applicable">
-                    </datalist>
-                </div>
-
-                <div class="pizza-toppings">
-                    <label for="pizzas">Choose a pizza topping:</label>
-                    <select  name="pizzas" id="pizza">
-                    <optgroup label="Meats">
-                        <option value="pepperoni">Pepperoni</option>
-                        <option value="sausage">Sausage</option>
-                        <option value="chicken">Chicken</option>
-                        <option value="meatball">Meatball</option>
-                    </optgroup>
-                    <optgroup label="Veggies">
-                        <option value="onions">Onions</option>
-                        <option value="bell peppers">Bell Peppers</option>
-                        <option value="olives">Olives</option>
-                        <option value="tomatoes">Tomatoes</option>
-                    </optgroup>
-                    </select>
-                </div>
-            </template>
-
-            <button onclick="display()">Display hidden content</button>
-
-            <script>
-                function display() {
-                  let temp = document.getElementsByTagName("template")[0];
-                  let cloned = temp.content.cloneNode(true);
-                  document.body.appendChild(cloned);
-                }
-            </script>
-            <br>
-            <br>
-
-            <canvas id="canv"></canvas>
-
-            <script>
-                var canvas = document.getElementById("canv");
-                var ctx = canvas.getContext("2d");
-                ctx.fillStyle = "red";
-                ctx.fillRect(10, 10, 180, 180);
-            </script>
-        </section>
-        <hr>
 
         <section class="contact-me" id="contact">
             <h2>Contact Me!</h2>
             <form action="submissions.php" method="post">
-                <fieldset>
-                    <legend id="contact-me">Input below:</legend>
-                    <label for="name">Name: </label>
-                    <input type="text" id="name" name="name" required>
-                    
-                    <label for="email">Email: </label>
-                    <input type="text" id="email" name="email" required>
-                    <br>
-
-                    <label for="phone">Phone: </label>
-                    <input type="text" id="phone" name="phone">
-                    <br>
-                
-
-                <label for="message">Message: </label>
-                <textarea id="message" name="message">Type your message here...</textarea>
-                <br>
-                </fieldset>
-                
+                <input type="text" class="contact-form-input" placeholder="Your name">
+                <input type="email " class="contact-form-input" placeholder="Your email">
+                <input type="text" class="contact-form-input" placeholder="Your phone number">
+                <textarea class="contact-form-input" placeholder="Your message"></textarea>
                 <button type="submit">Send</button>
             </form>
-        </section>
+        </section> 
     </main>
-    <footer>
-        <a href="mailto:whnguyen23@gmail.com">whnguyen23@gmail.com</a>
-    </footer>
 </body>
 </html>
 
