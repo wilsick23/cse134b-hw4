@@ -7,13 +7,13 @@
 	<meta name="keywords" content="HTML" />
 	<meta name="author" content="Wilson Nguyen" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>CSE 134B Homework 3 Website</title>
+	<title>CSE 134B Homework 4 Website</title>
     <link href="styles/main.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-
+    <script src="pagescript.js"></script>
 </head>
 
 <body>
@@ -68,11 +68,32 @@
 
         <section class="contact-me" id="contact">
             <h2>Contact Me!</h2>
-            <form action="submissions.php" method="post">
-                <input type="text" class="contact-form-input" placeholder="Your name">
-                <input type="email " class="contact-form-input" placeholder="Your email">
-                <input type="text" class="contact-form-input" placeholder="Your phone number">
-                <textarea class="contact-form-input" placeholder="Your message"></textarea>
+            <form id="form" action="https://httpbin.org">
+                <label for="name">Your name</label>
+                <input id="formName" type="text" placeholder="*Required" required>
+                <output for="name" class="nameError"></output>
+                <!-- <output for="name" class="nameInfo"></output> -->
+                <br>
+
+                <label for="email">Your email</label>
+                <input id="formEmail" type="email" placeholder="*Required" required>
+                <output for="email" class="emailError"></output>
+                <!-- <output for="email" class="emailInfo"></output> -->
+                <br>
+
+                <!-- <label for="phone">Your phone number</label>
+                <input id="formPhone" type="text" placeholder="*Required" required>
+                <output for="phone" class="phoneError"></output>
+                <output for="phone" class="phoneInfo"></output>
+                <br> -->
+
+                <label for="message">Your message</label>
+                <textarea id="formMessage" placeholder="*Required" required oninput="mask()"></textarea>
+                <output for="message" id="messageError"></output>
+                <!-- <output for="message" class="messageInfo"></output> -->
+                <br>
+
+                <input type="hidden" id="possible_bot" name="possible_bot" value="true">
                 <button type="submit">Send</button>
             </form>
         </section> 

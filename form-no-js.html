@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Non-styled Portfolio Page" />
+	<meta name="keywords" content="HTML" />
+	<meta name="author" content="Wilson Nguyen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CSE 134B Homework 4 Form</title>
+    <link href="styles/main.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <style>
+        .contact-me {
+            padding: 40px 0;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding:0 10px;
+            overflow: hidden;
+        }
+
+        label {
+            color: #929292;
+        }
+
+        input, textarea {
+            display: block;
+            width: 100%;
+            box-sizing:border-box;
+            margin: 16px 0;
+            border: 0;
+            background-color: #93d8b0;
+            opacity: 100%;
+            padding: 20px 40px;
+            outline: none;
+            transition: 0.3s;
+            color: black;
+        }
+
+        input:focus, textarea:focus {
+            box-shadow: 0 0 10px 4px #929292;
+
+        }
+
+        input:invalid, textarea:invalid {
+            box-shadow: 0 0 10px 4px #ac7575;
+        }
+
+        ::placeholder {
+            color: rgb(255, 107, 107);
+        }
+
+        textarea {
+            resize: none;
+            height: 160px;
+        }
+
+        button {
+            color: white;
+            float: left;
+            border: 0;
+            background: #289756;
+            padding: 12px 50px;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="contact-me" id="contact">
+        <h2>Contact Me!</h2>
+        <form action="https://httpbin.org/post" method="post">
+            <label for="name">Your name</label>
+            <input type="text" placeholder="*Required" required>
+            <br>
+
+            <label for="email">Your email</label>
+            <input type="email" placeholder="*Required" required>
+            <br>
+
+            <label for="phone">Your phone number</label>
+            <input type="text" placeholder="*Required" pattern="[0-9]+" required minlength="7" maxlength="13">
+            <br>
+
+            <label for="message">Your message</label>
+            <textarea placeholder="*Required" minlength="20" maxlength="300" pattern="[A-Za-z0-9]+" required></textarea>
+            <br>
+            
+            <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+            <button type="submit">Send</button>
+        </form>
+    </section> 
+</body>
+</html>
