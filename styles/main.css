@@ -196,6 +196,7 @@ form {
 
 label {
     color: #929292;
+    margin-top: 15%;
 }
 
 input, textarea {
@@ -217,13 +218,40 @@ input:focus, textarea:focus {
 
 }
 
+#nameError {
+    color: red;
+}
+
 ::placeholder {
     color: rgb(255, 107, 107);
+}
+
+#messageError {
+    color: red;
 }
 
 textarea {
     resize: none;
     height: 160px;
+}
+
+
+.fade-out {
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+.warning:focus {
+    box-shadow: 0 0 10px 4px #f5acac;
 }
 
 button {
@@ -233,7 +261,10 @@ button {
     background: #289756;
     padding: 12px 50px;
     transition: 0.5s;
+    margin-top: 5%;
 }
+
+
 
 @media (max-width: 952px) {
     

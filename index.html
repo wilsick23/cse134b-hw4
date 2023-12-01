@@ -54,6 +54,7 @@
                     <i>Cognitive Science: Design & Interaction</i>, with a minor in <i>Computer Science</i>. I am hoping
                     to break into tech as a <strong>UI/UX Designer</strong>. 
                 </p>
+            </div>
         </section> 
 
         <section class="my-projects" id="projects">
@@ -68,17 +69,19 @@
 
         <section class="contact-me" id="contact">
             <h2>Contact Me!</h2>
-            <form id="form" action="https://httpbin.org">
-                <label for="name">Your name</label>
-                <input id="formName" type="text" placeholder="*Required" required>
-                <output for="name" class="nameError"></output>
+            <form id="form" action="https://httpbin.org/post" method="post" onsubmit="submitForm()">
+                <label for="formName">Your name</label>
+                <input name="formName" id="formName" type="text" placeholder="*Required" required oninput="nameMask();">
+                <output id="nameError"></output>
                 <!-- <output for="name" class="nameInfo"></output> -->
                 <br>
+                <br>
 
-                <label for="email">Your email</label>
-                <input id="formEmail" type="email" placeholder="*Required" required>
-                <output for="email" class="emailError"></output>
+                <label for="formEmail">Your email</label>
+                <input name="formEmail" id="formEmail" type="email" placeholder="*Required" required>
+                <output class="emailError"></output>
                 <!-- <output for="email" class="emailInfo"></output> -->
+                <br>
                 <br>
 
                 <!-- <label for="phone">Your phone number</label>
@@ -87,10 +90,11 @@
                 <output for="phone" class="phoneInfo"></output>
                 <br> -->
 
-                <label for="message">Your message</label>
-                <textarea id="formMessage" placeholder="*Required" required oninput="mask()"></textarea>
-                <output for="message" id="messageError"></output>
-                <!-- <output for="message" class="messageInfo"></output> -->
+                <label for="formMessage">Your message</label>
+                <textarea name="formMessage" id="formMessage" placeholder="*Required" required oninput="mask(); characterCount()" maxlength="400"></textarea>
+                <output id="messageInfo">400 characters remaining</output>
+                <br>
+                <output id="messageError"></output>
                 <br>
 
                 <input type="hidden" id="possible_bot" name="possible_bot" value="true">
