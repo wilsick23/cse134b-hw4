@@ -31,7 +31,7 @@ function nameMask() {
     if (!nameInput.value.match(/^[a-zA-Z_\s]+$/) && nameInput.value != ''){
         flashNameField();
         nameInput.value = nameInput.value.replace(/[^a-zA-Z_\s]/g, '');
-        form_errors.push("Invalid character");
+        form_errors.push("Invalid name character");
     }
 }
 
@@ -51,7 +51,7 @@ function mask() {
     if (!messageInput.value.match(/^[a-zA-Z0-9_\s]+$/) && messageInput.value != ''){
         flashField();
         messageInput.value = messageInput.value.replace(/[^a-zA-Z0-9_\s]/g, '');
-        form_errors.push("Invalid character");
+        form_errors.push("Invalid message character");
     }
 }
 
@@ -79,4 +79,5 @@ function submitForm() {
     })
 
     alert(form_errors);
+    form_errors = [];
 }
